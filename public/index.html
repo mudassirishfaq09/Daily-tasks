@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Today's Tasks</h1>
+    <form id="task-form">
+        <input type="text" id="task-input" placeholder="Enter a new task" required>
+        <button type="submit">Add Task</button>
+    </form>
+    <div class="button-group">
+        <button onclick="showTasks('all')">All Tasks</button>
+        <button onclick="showTasks('completed')">Completed Tasks</button>
+        <button onclick="showTasks('pending')">Pending Tasks</button>
+    </div>
+
+    <div id="tasks-view">
+        <ul id="task-list"></ul>
+    </div>
+    
+    <div id="completed-view" class="hidden">
+        <h2>Completed Tasks</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Task</th>
+                </tr>
+            </thead>
+            <tbody id="completed-tasks"></tbody>
+        </table>
+        <button onclick="showTasks('all')">Back</button>
+    </div>
+    
+    <div id="pending-view" class="hidden">
+        <h2>Pending Tasks</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Task</th>
+                </tr>
+            </thead>
+            <tbody id="pending-tasks"></tbody>
+        </table>
+        <button onclick="showTasks('all')">Back</button>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

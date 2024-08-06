@@ -1,0 +1,182 @@
+body {
+    font-family: "Poppins", sans-serif;
+    background: #121212;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #ffcc00;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+    gap: 10px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background: #1e1e1e;
+    color: #e0e0e0;
+}
+
+button {
+    padding: 10px;
+    background: #ffcc00;
+    color: #121212;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.button-group {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #333;
+}
+
+.task-text {
+    flex: 1;
+}
+
+.task-actions button {
+    margin-left: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.task-actions .complete {
+    background: #28a745;
+    color: white;
+    border-radius: 4px;
+    padding: 5px 10px;
+}
+
+.task-actions .delete {
+    background: #dc3545;
+    color: white;
+    border-radius: 4px;
+    padding: 5px 10px;
+}
+
+.task-actions .completed-status {
+    background: #6c757d;
+    color: white;
+    cursor: default;
+    border-radius: 4px;
+    padding: 5px 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background: #1e1e1e;
+}
+
+.completed-status {
+    text-decoration: line-through;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    h1, h2 {
+        font-size: 1.5rem;
+    }
+
+    form {
+        flex-direction: row;
+    }
+
+    input[type="text"] {
+        margin-bottom: 10px;
+    }
+
+    .button-group {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .task-actions {
+        display: flex;
+        gap: 5px;
+        margin-top: 10px;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1, h2 {
+        font-size: 1.2rem;
+    }
+    form {
+        flex-wrap: wrap;
+        justify-content: center!important;
+        align-items: center!important;
+    }
+    button {
+        padding: 10px;
+    }
+
+    input[type="text"] {
+        padding: 8px;
+    }
+
+    .task-actions {
+        flex-direction: row;
+        gap: 5px;
+        justify-content: center!important;
+    }
+
+    table {
+        font-size: 0.8rem;
+    }
+}
